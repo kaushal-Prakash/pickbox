@@ -1,0 +1,131 @@
+:root {
+  /* theme colors */
+  --light-cream: #f4ffc3;
+  --light-green: #a9c46c;
+  --olive-green: #809d3c;
+  --dark-olive-green: #5d8736;
+}
+
+#navbar{
+    box-shadow: 1px 1px 3px var(--dark-olive-green);
+}
+
+#search-box {
+  box-shadow: inset -3px -3px 3px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+#login-btn {
+  box-shadow: inset -3px -3px 3px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+#login-btn:hover {
+  animation: hover-slide-up 0.3s forwards;
+  background-color: var(--dark-olive-green);
+  color: white;
+}
+
+#logout-btn {
+  box-shadow: inset -3px -3px 3px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  text-shadow: 1px 1px 1px black;
+}
+#logout-btn:hover {
+  animation: hover-slide-up 0.3s forwards;
+  background-color: var(--dark-olive-green);
+}
+
+#cart-btn {
+  box-shadow: inset -3px -3px 3px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+#cart-btn:hover {
+  animation: hover-grow 0.3s forwards;
+}
+
+#cart-btn:hover #cart-icon {
+    animation: hover-cart 0.5s forwards;
+}
+
+@keyframes hover-circle {
+  0% {
+    transform: scale(1) translate(10px, 0);
+  }
+  12.5% {
+    transform: scale(1.05) translate(7px, 7px);
+  }
+  25% {
+    transform: scale(1.1) translate(0, 10px);
+  }
+  37.5% {
+    transform: scale(1.15) translate(-7px, 7px);
+  }
+  50% {
+    transform: scale(1.2) translate(-10px, 0);
+  }
+  62.5% {
+    transform: scale(1.15) translate(-7px, -7px);
+  }
+  75% {
+    transform: scale(1.1) translate(0, -10px);
+  }
+  87.5% {
+    transform: scale(1.05) translate(7px, -7px);
+  }
+  100% {
+    transform: scale(1) translate(0px, 0);
+  }
+}
+
+@keyframes hover-cart {
+    0% {
+        opacity: 0;
+        transform: scale(0.5) translateX(-20px);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(1.2) translateX(0);
+    }
+    80% {
+        transform: scale(0.9) translateX(5px);
+    }
+    90% {
+        transform: scale(1.1) translateX(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateX(0);
+    }
+}
+
+
+@keyframes hover-grow {
+  0% {
+    transform: scale(1);
+    box-shadow: inset -3px -3px 3px rgba(0, 0, 0, 0.2);
+  }
+  100% {
+    transform: scale(1.1);
+    box-shadow: inset -3px -3px 10px rgba(0, 0, 0, 0.4);
+  }
+}
+
+@keyframes hover-slide-up {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes hover-color-change {
+  0% {
+    background-color: var(--light-green);
+    color: var(--dark-olive-green);
+  }
+  100% {
+    background-color: var(--olive-green);
+    color: white;
+  }
+}

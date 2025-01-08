@@ -1,8 +1,9 @@
+import { Navbar } from "@/components/Components";
 
-export default function Home() {
+export default function Landing() {
   return (
     <div>
-      Home
+      <Navbar/>
     </div>
   );
 }
