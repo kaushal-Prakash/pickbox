@@ -6,8 +6,8 @@
   --dark-olive-green: #5d8736;
 }
 
-#navbar{
-    box-shadow: 1px 1px 3px var(--dark-olive-green);
+#navbar {
+  box-shadow: 1px 1px 3px var(--dark-olive-green);
 }
 
 #search-box {
@@ -44,7 +44,53 @@
 }
 
 #cart-btn:hover #cart-icon {
-    animation: hover-cart 0.5s forwards;
+  animation: hover-cart 0.5s forwards;
+}
+
+#menu {
+  animation: menu 0.5s forwards;
+}
+
+#menu-search-box {
+  animation: menu-search-box 0.5s forwards;
+}
+
+@keyframes menu-search-box{
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes menu {
+  0% {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+  20% {
+    opacity: 0.3;
+    transform: translateX(150px);
+  }
+  40% {
+    opacity: 0.6;
+    transform: translateX(100px);
+  }
+  60% {
+    opacity: 0.9;
+    transform: translateX(50px);
+  }
+  80% {
+    opacity: 1;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @keyframes hover-circle {
@@ -78,26 +124,25 @@
 }
 
 @keyframes hover-cart {
-    0% {
-        opacity: 0;
-        transform: scale(0.5) translateX(-20px);
-    }
-    60% {
-        opacity: 1;
-        transform: scale(1.2) translateX(0);
-    }
-    80% {
-        transform: scale(0.9) translateX(5px);
-    }
-    90% {
-        transform: scale(1.1) translateX(0);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1) translateX(0);
-    }
+  0% {
+    opacity: 0;
+    transform: scale(0.5) translateX(-20px);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.2) translateX(0);
+  }
+  80% {
+    transform: scale(0.9) translateX(5px);
+  }
+  90% {
+    transform: scale(1.1) translateX(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateX(0);
+  }
 }
-
 
 @keyframes hover-grow {
   0% {
